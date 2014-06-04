@@ -19,7 +19,7 @@ public class medicamento {
     }
     
     public void crearMedicamento(String nombre, String fechaFab, String fechaCad, String tipo, String principioActivos, int precio){
-        medicamento m = new medicamento(nombre, fechaFab, fechaCad, tipo, principioActivos, precio);
+        medicamento m = new medicamento();
         
     }
 }
