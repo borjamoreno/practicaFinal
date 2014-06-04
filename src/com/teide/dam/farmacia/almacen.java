@@ -15,4 +15,5 @@ public class almacen {
 }
 
 
-lo lees??
+/*lo lees??
+si*/
