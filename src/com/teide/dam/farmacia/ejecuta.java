@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class ejecuta {
     public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
     int opcion=0;
     do{
             System.out.println("Para dar de alta un medicamento, pulse 1");
@@ -23,8 +23,24 @@ public class ejecuta {
             System.out.println("Para eliminar un medicamento, pulse 4");
             System.out.println("Para salir, pulse 5");
             opcion=s.nextInt();
+            s.nextLine();
+            switch(opcion) {
+        
+    case 1: crearMedicamento(); break;
+    case 2: buscarMedicamento(); break;
+    case 3: venderMedicamento(); break;
+    case 4: eliminarMedicamento(); break;
+        
+        }
     }
     while(opcion!=5);
     }
+
+    private static void crearMedicamento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+}
 
 }
