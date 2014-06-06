@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Jose
+ * @author Jose y Borja
  */
 public class Medicamentos {
     private String nombre, tipo;
@@ -76,8 +76,6 @@ public class Medicamentos {
     public void setS(Scanner s) {
         this.s = s;
     }
-
-
     
     private void crearMedicamento(String nombre, GregorianCalendar fechaFabricacion, GregorianCalendar fechaCaducidad, String tipo, double precio){
     ArrayList<String> listado = new ArrayList<>();
@@ -85,7 +83,7 @@ public class Medicamentos {
         System.out.println("Introduzca el nombre del medicamento");
         nombre=s.nextLine();
         System.out.println("Introduzca el nombre del medicamento");
-        fechaFabricacion=s.next();
+        //fechaFabricacion=s.next();
 
 
     }
