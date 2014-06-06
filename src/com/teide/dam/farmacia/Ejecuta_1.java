@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Jose
  */
-public class ejecuta {
+public class Ejecuta_1 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
     int opcion=0;
@@ -40,7 +40,5 @@ public class ejecuta {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
-}
 
 }
