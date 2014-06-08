@@ -91,8 +91,7 @@ public class Medicamentos {
             listado.add(fechaFabricacion);
             listado.add(fechaCaducidad);
             listado.add(precio);
-
-        //¿Por qué pones los sout aqui? no seria mejor ponerlos en el ejecuta como te dije? y por qué lo has puesto dos veces?
-        //ademas hay que hacer el arraylist, y hacer que se añada el medicamento a él
+            //Preguntar si al ordenar el nombre, se ordenan con él o son independientes
     }
+    
 }
