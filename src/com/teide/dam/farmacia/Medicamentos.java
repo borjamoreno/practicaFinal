@@ -75,8 +75,9 @@ public class Medicamentos {
         this.s = s;
     }
     
+    ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
+    
     private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
-        ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
         Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
             System.out.println("Introduzca el nombre del medicamento");
             nombre=s.nextLine();
@@ -93,5 +94,26 @@ public class Medicamentos {
             listado.add(m);
             //Preguntar si al ordenar el nombre, se ordenan con él o son independientes
     }
-    
+    boolean buscarMedicamento(Medicamentos m) {
+         System.out.println("Desea buscar por:");
+         System.out.println("1. Nombre");
+         System.out.println("2. Principio activo");
+         int option=s.nextInt();
+         if (option==1){
+             System.out.println("¿Qué esta buscando?");
+             String busqueda=s.nextLine();
+             if (listado.contains(busqueda)) {
+                 System.out.println(listado.indexOf(busqueda));
+             }
+             else System.out.println("No se ha encontrado ningun medicamento con ese nombre");
+         }
+         else if (option==2){
+             System.out.println("¿Qué principio activo desa buscar?");
+             String busqueda2=s.nextLine();
+             if (listado.contains(busqueda2)) {
+                 System.out.println(listado.indexOf(busqueda2));
+             }
+             else System.out.println("No se ha encontrado ningun principio activo con ese nombre");
+         }
+         else if (option !=1 && option!=2) System.out.println("Eleccion incorrecta");
 }
