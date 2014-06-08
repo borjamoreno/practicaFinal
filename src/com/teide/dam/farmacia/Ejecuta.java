@@ -6,6 +6,7 @@
 
 package com.teide.dam.farmacia;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -39,6 +40,5 @@ public class Ejecuta {
     private static void crearMedicamento() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

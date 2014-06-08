@@ -15,13 +15,11 @@ import java.util.Scanner;
  * @author Jose y Borja
  */
 public class Medicamentos {
-    private String nombre, tipo;
-    private GregorianCalendar fechaFabricacion, fechaCaducidad;
-    private double precio;
+    private String nombre, tipo, fechaFabricacion, fechaCaducidad, precio;
     Scanner s = new Scanner(System.in);
 
    
-    private Medicamentos(String nombre, GregorianCalendar fechaFabricacion, GregorianCalendar fechaCaducidad, String tipo, double precio) {
+    private Medicamentos(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio) {
         this.nombre = nombre;
         this.fechaFabricacion = fechaFabricacion;
         this.fechaCaducidad = fechaCaducidad;
@@ -45,27 +43,27 @@ public class Medicamentos {
         this.tipo = tipo;
     }
 
-    public GregorianCalendar getFechaFabricacion() {
+    public String getFechaFabricacion() {
         return fechaFabricacion;
     }
 
-    public void setFechaFabricacion(GregorianCalendar fechaFabricacion) {
+    public void setFechaFabricacion(String fechaFabricacion) {
         this.fechaFabricacion = fechaFabricacion;
     }
 
-    public GregorianCalendar getFechaCaducidad() {
+    public String getFechaCaducidad() {
         return fechaCaducidad;
     }
 
-    public void setFechaCaducidad(GregorianCalendar fechaCaducidad) {
+    public void setFechaCaducidad(String fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 
@@ -77,13 +75,22 @@ public class Medicamentos {
         this.s = s;
     }
     
-    private void crearMedicamento(String nombre, GregorianCalendar fechaFabricacion, GregorianCalendar fechaCaducidad, String tipo, double precio){
-    ArrayList<String> listado = new ArrayList<>();
-    Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
-        System.out.println("Introduzca el nombre del medicamento");
-        nombre=s.nextLine();
-        System.out.println("Introduzca el nombre del medicamento");
-        //fechaFabricacion=s.next();
+    private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
+        ArrayList<String> listado = new ArrayList<>();
+        Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
+            System.out.println("Introduzca el nombre del medicamento");
+            nombre=s.nextLine();
+            System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
+            fechaFabricacion=s.nextLine();
+            System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
+            fechaCaducidad=s.nextLine();
+            s.nextLine();
+            System.out.println("Introduzca el precio del medicamento");
+            precio=s.nextLine();
+            listado.add(nombre);
+            listado.add(fechaFabricacion);
+            listado.add(fechaCaducidad);
+            listado.add(precio);
 
         //¿Por qué pones los sout aqui? no seria mejor ponerlos en el ejecuta como te dije? y por qué lo has puesto dos veces?
         //ademas hay que hacer el arraylist, y hacer que se añada el medicamento a él
