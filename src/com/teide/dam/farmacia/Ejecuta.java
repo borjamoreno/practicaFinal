@@ -28,9 +28,9 @@ public class Ejecuta {
             switch(opcion) {
         
     case 1: crearMedicamento(); break;
-    /*case 2: buscarMedicamento(); break;
-    case 3: venderMedicamento(); break;
-    case 4: eliminarMedicamento(); break;*/
+    case 2: buscarMedicamento(); break;
+    //case 3: venderMedicamento(); break;
+    case 4: eliminarMedicamento(); break;
         
         }
     }
@@ -38,7 +38,11 @@ public class Ejecuta {
     }
 
     private static void crearMedicamento() {
-        super.
-        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void buscarMedicamento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

@@ -94,7 +94,7 @@ public class Medicamentos {
             listado.add(m);
             //Preguntar si al ordenar el nombre, se ordenan con él o son independientes
     }
-    boolean buscarMedicamento(Medicamentos m) {
+    private void buscarMedicamento(Medicamentos m) {
          System.out.println("Desea buscar por:");
          System.out.println("1. Nombre");
          System.out.println("2. Principio activo");
@@ -106,6 +106,7 @@ public class Medicamentos {
                  System.out.println(listado.indexOf(busqueda));
              }
              else System.out.println("No se ha encontrado ningun medicamento con ese nombre");
+             
          }
          else if (option==2){
              System.out.println("¿Qué principio activo desa buscar?");
@@ -116,4 +117,5 @@ public class Medicamentos {
              else System.out.println("No se ha encontrado ningun principio activo con ese nombre");
          }
          else if (option !=1 && option!=2) System.out.println("Eleccion incorrecta");
+    }
 }
