@@ -76,7 +76,7 @@ public class Medicamentos {
     }
     
     private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
-        ArrayList<String> listado = new ArrayList<>();
+        ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
         Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
             System.out.println("Introduzca el nombre del medicamento");
             nombre=s.nextLine();
@@ -84,13 +84,13 @@ public class Medicamentos {
             fechaFabricacion=s.nextLine();
             System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
             fechaCaducidad=s.nextLine();
-            s.nextLine();
             System.out.println("Introduzca el precio del medicamento");
             precio=s.nextLine();
-            listado.add(nombre);
-            listado.add(fechaFabricacion);
-            listado.add(fechaCaducidad);
-            listado.add(precio);
+            m.setNombre(nombre);
+            m.setFechaFabricacion(fechaFabricacion);
+            m.setFechaCaducidad(fechaCaducidad);
+            m.setPrecio(precio);
+            listado.add(m);
             //Preguntar si al ordenar el nombre, se ordenan con él o son independientes
     }
     
