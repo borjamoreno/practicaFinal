@@ -11,20 +11,20 @@ package com.teide.dam.farmacia;
  * @author Jose
  */
 public class PrincipiosActivos {
-    private String nombre;
+    private String nombrePA;
     private int mg;
 
-    public PrincipiosActivos(String nombre, int mg) {
-        this.nombre = nombre;
+    public PrincipiosActivos(String nombrePA, int mg) {
+        this.nombrePA = nombrePA;
         this.mg = mg;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getnombrePA() {
+        return nombrePA;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombrePA(String nombre) {
+        this.nombrePA = nombrePA;
     }
 
     public int getMg() {

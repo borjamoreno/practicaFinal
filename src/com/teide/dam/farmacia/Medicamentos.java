@@ -91,6 +91,7 @@ public class Medicamentos {
             fechaCaducidad=s.nextLine();
             System.out.println("Introduzca el precio del medicamento");
             precio=s.nextLine();
+            
             m.setNombre(nombre);
             m.setFechaFabricacion(fechaFabricacion);
             m.setFechaCaducidad(fechaCaducidad);
@@ -113,7 +114,7 @@ public class Medicamentos {
              
          }
          else if (option==2){
-             System.out.println("¿Qué principio activo desa buscar?");
+             System.out.println("¿Qué principio activo desea buscar?");
              String busqueda2=s.nextLine();
              if (listado.contains(new Medicamentos(busqueda2))) {
                  System.out.println(listado.indexOf(busqueda2));
