@@ -83,14 +83,14 @@ public class Medicamentos {
     
     private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
         Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
-            System.out.println("Introduzca el nombre del medicamento");
-            nombre=s.nextLine();
-            System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
-            fechaFabricacion=s.nextLine();
-            System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
-            fechaCaducidad=s.nextLine();
-            System.out.println("Introduzca el precio del medicamento");
-            precio=s.nextLine();
+            //System.out.println("Introduzca el nombre del medicamento");
+            //nombre=s.nextLine();
+            //System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
+            //fechaFabricacion=s.nextLine();
+            //System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
+            //fechaCaducidad=s.nextLine();
+            //System.out.println("Introduzca el precio del medicamento");
+            //precio=s.nextLine();
             
             m.setNombre(nombre);
             m.setFechaFabricacion(fechaFabricacion);

@@ -5,7 +5,6 @@
  */
 
 package com.teide.dam.farmacia;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,7 +26,19 @@ public class Ejecuta {
             s.nextLine();
             switch(opcion) {
         
-    case 1: crearMedicamento(); break;
+    case 1: 
+            s.nextInt();
+            System.out.println("Introduzca el nombre del medicamento");
+            String nombre=s.nextLine();
+            System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
+            String fechaFabricacion=s.nextLine();
+            System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
+            String fechaCaducidad=s.nextLine();
+            System.out.println("Introduzca el precio del medicamento");
+            String precio=s.nextLine();
+            Medicamentos.crearMedicamento(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
+            
+            ; break;
     case 2: buscarMedicamento(); break;
     //case 3: venderMedicamento(); break;
     case 4: eliminarMedicamento(); break;
