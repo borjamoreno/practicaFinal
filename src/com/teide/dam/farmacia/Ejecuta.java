@@ -16,6 +16,7 @@ public class Ejecuta {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
     int opcion=0;
+    ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
     do{
             System.out.println("Para dar de alta un medicamento, pulse 1");
             System.out.println("Para buscar un medicamento, pulse 2");
@@ -36,7 +37,16 @@ public class Ejecuta {
             String fechaCaducidad=s.nextLine();
             System.out.println("Introduzca el precio del medicamento");
             String precio=s.nextLine();
-            Medicamentos.crearMedicamento(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
+            System.out.println("Introduzca el tipo de medicamento (con receta o sin receta)");
+            String tipo = s.nextLine();
+            Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
+            m.setNombre(nombre);
+            m.setFechaFabricacion(fechaFabricacion);
+            m.setFechaCaducidad(fechaCaducidad);
+            m.setPrecio(precio);
+            m.setTipo(tipo);
+            listado.add(m);
+            
             
             ; break;
     case 2: buscarMedicamento(); break;

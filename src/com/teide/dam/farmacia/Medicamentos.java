@@ -31,6 +31,10 @@ public class Medicamentos {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    Medicamentos(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -81,9 +85,9 @@ public class Medicamentos {
     
     ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
     
-    private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
+    /*private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
         Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
-            //System.out.println("Introduzca el nombre del medicamento");
+            System.out.println("Introduzca el nombre del medicamento");
             //nombre=s.nextLine();
             //System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
             //fechaFabricacion=s.nextLine();
@@ -96,8 +100,7 @@ public class Medicamentos {
             m.setFechaFabricacion(fechaFabricacion);
             m.setFechaCaducidad(fechaCaducidad);
             m.setPrecio(precio);
-            listado.add(m);
-            //Preguntar si al ordenar el nombre, se ordenan con él o son independientes
+            listado.add(m);*/
     }
     private void buscarMedicamento(Medicamentos m) {
          System.out.println("Desea buscar por:");
