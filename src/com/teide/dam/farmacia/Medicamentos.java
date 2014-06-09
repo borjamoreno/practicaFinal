@@ -27,6 +27,10 @@ public class Medicamentos {
         this.precio = precio;
     }
 
+    private Medicamentos(String busqueda) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -102,7 +106,7 @@ public class Medicamentos {
          if (option==1){
              System.out.println("¿Qué esta buscando?");
              String busqueda=s.nextLine();
-             if (listado.contains(busqueda)) {
+             if (listado.contains(new Medicamentos(busqueda))) {
                  System.out.println(listado.indexOf(busqueda));
              }
              else System.out.println("No se ha encontrado ningun medicamento con ese nombre");
@@ -111,7 +115,7 @@ public class Medicamentos {
          else if (option==2){
              System.out.println("¿Qué principio activo desa buscar?");
              String busqueda2=s.nextLine();
-             if (listado.contains(busqueda2)) {
+             if (listado.contains(new Medicamentos(busqueda2))) {
                  System.out.println(listado.indexOf(busqueda2));
              }
              else System.out.println("No se ha encontrado ningun principio activo con ese nombre");
