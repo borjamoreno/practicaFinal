@@ -123,4 +123,13 @@ public class Medicamentos {
          }
          else if (option !=1 && option!=2) System.out.println("Eleccion incorrecta");
     }
+    private void eliminarMedicamento(Medicamentos m) {
+         System.out.println("Introduzca el nombre del medicamento a eliminar:");
+         String busqueda=s.nextLine();
+             if (listado.contains(new Medicamentos(busqueda))) {
+                 listado.remove(busqueda);
+             }
+             else System.out.println("No se ha encontrado ningun medicamento con ese nombre");
+         
+    }
 }
