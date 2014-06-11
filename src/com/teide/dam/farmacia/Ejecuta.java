@@ -16,7 +16,7 @@ public class Ejecuta {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
     int opcion=0;
-    ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
+    ArrayList<Medicamentos> listado = new ArrayList<>();
     do{
             System.out.println("Para dar de alta un medicamento, pulse 1");
             System.out.println("Para buscar un medicamento, pulse 2");
@@ -27,30 +27,9 @@ public class Ejecuta {
             s.nextLine();
             switch(opcion) {
         
-    case 1: 
-            s.nextInt();
-            System.out.println("Introduzca el nombre del medicamento");
-            String nombre=s.nextLine();
-            System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
-            String fechaFabricacion=s.nextLine();
-            System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
-            String fechaCaducidad=s.nextLine();
-            System.out.println("Introduzca el precio del medicamento");
-            String precio=s.nextLine();
-            System.out.println("Introduzca el tipo de medicamento (con receta o sin receta)");
-            String tipo = s.nextLine();
-            Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
-            m.setNombre(nombre);
-            m.setFechaFabricacion(fechaFabricacion);
-            m.setFechaCaducidad(fechaCaducidad);
-            m.setPrecio(precio);
-            m.setTipo(tipo);
-            listado.add(m);
-            
-            
-            ; break;
+    case 1: crearMedicamento();break;
     case 2: buscarMedicamento(); break;
-    //case 3: venderMedicamento(); break;
+    case 3: venderMedicamento(); break;
     case 4: eliminarMedicamento(); break;
         
         }
@@ -58,15 +37,20 @@ public class Ejecuta {
     while(opcion!=5);
     }
 
-    private static void crearMedicamento() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     private static void buscarMedicamento() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static void eliminarMedicamento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void crearMedicamento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void venderMedicamento() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

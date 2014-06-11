@@ -7,7 +7,6 @@
 package com.teide.dam.farmacia;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 /**
@@ -15,6 +14,7 @@ import java.util.Scanner;
  * @author Jose y Borja
  */
 public class Medicamentos {
+
     private String nombre, tipo, fechaFabricacion, fechaCaducidad, precio;
     Scanner s = new Scanner(System.in);
 
@@ -28,10 +28,6 @@ public class Medicamentos {
     }
 
     private Medicamentos(String busqueda) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    Medicamentos(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -83,24 +79,27 @@ public class Medicamentos {
         this.s = s;
     }
     
-    ArrayList<Medicamentos> listado = new ArrayList<Medicamentos>();
+    ArrayList<Medicamentos> listado = new ArrayList<>();
     
-    /*private void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
+    public void crearMedicamento(String nombre, String fechaFabricacion, String fechaCaducidad, String tipo, String precio){
         Medicamentos m = new Medicamentos(nombre, fechaFabricacion, fechaCaducidad, tipo, precio);
             System.out.println("Introduzca el nombre del medicamento");
-            //nombre=s.nextLine();
-            //System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
-            //fechaFabricacion=s.nextLine();
-            //System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
-            //fechaCaducidad=s.nextLine();
-            //System.out.println("Introduzca el precio del medicamento");
-            //precio=s.nextLine();
+            nombre=s.nextLine();
+            System.out.println("Introduzca la fecha de fabricacion del medicamento separado por '/'");
+            fechaFabricacion=s.nextLine();
+            System.out.println("Introduzca la fecha de caducidad del medicamento separado por '/'");
+            fechaCaducidad=s.nextLine();
+            System.out.println("Introduzca el precio del medicamento");
+            precio=s.nextLine();
+            System.out.println("¿Tiene receta?");
+            tipo=s.nextLine();
             
             m.setNombre(nombre);
             m.setFechaFabricacion(fechaFabricacion);
             m.setFechaCaducidad(fechaCaducidad);
             m.setPrecio(precio);
-            listado.add(m);*/
+            m.setTipo(tipo);
+            listado.add(m);
     }
     private void buscarMedicamento(Medicamentos m) {
          System.out.println("Desea buscar por:");
