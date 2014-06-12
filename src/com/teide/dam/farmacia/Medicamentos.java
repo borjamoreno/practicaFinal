@@ -134,4 +134,18 @@ public class Medicamentos {
              else System.out.println("No se ha encontrado ningun medicamento con ese nombre");
          
     }
+
+    private void venderMedicamento(Medicamentos m) {
+         System.out.println("Introduzca el nombre del medicamento a eliminar:");
+         String busqueda=s.nextLine();
+             if (listado.contains(new Medicamentos(busqueda))) {
+                 System.out.println("¿Cuantas unidades?");
+                 int unidades = s.nextInt();
+                 int precioInt = Integer.parseInt(precio);
+                 int total= unidades * precioInt;
+                 System.out.println("El precio total son: "+total);
+             }
+             else System.out.println("No se ha encontrado ningun medicamento con ese nombre");
+         
+    }
 }
